@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Skillbus</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <nav class="header__nav header-nav">
+          <img src="/images/logo.png" alt="Логотип" class="header-nav__logo">
+          <form action="#" class="header-nav__form" id="search-form">
+            <input class="header-nav__input" placeholder="Введите запрос" type="text">
+          </form>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <h1 class="main__title title">
+          Клиенты
+        </h1>
+      </div>
+      <div class="container container--table">
+        <div class="main__table-wrapper scroll-bar" id="scroll-bar" data-simplebar>
+          <table class="main__table main-table">
+            <thead class="main-table__th">
+              <tr>
+                <th class="main-table__thead" id="th-id">
+                  ID
+                  <svg class="main-table__icon table-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_224_710)">
+                      <path d="M10 6L9.295 5.295L6.5 8.085L6.5 2H5.5L5.5 8.085L2.71 5.29L2 6L6 10L10 6Z"
+                        fill="#9873FF" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_224_710">
+                        <rect width="12" height="12" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </th>
+                <th class="main-table__thead main-table__thead--fio" id="th-name">
+                  Фамилия Имя Отчество
+                  <svg class="main-table__icon table-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_211_4868)">
+                      <path d="M10 6L9.295 5.295L6.5 8.085L6.5 2H5.5L5.5 8.085L2.71 5.29L2 6L6 10L10 6Z"
+                        fill="#9873FF" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_211_4868">
+                        <rect width="12" height="12" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <span class="main-table__thead--active">
+                    А-Я
+                  </span>
+                </th>
+                <th class="main-table__thead main-table__thead--time" id="th-create-time">
+                  Дата и время создания
+                  <svg class="main-table__icon table-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_224_710)">
+                      <path d="M10 6L9.295 5.295L6.5 8.085L6.5 2H5.5L5.5 8.085L2.71 5.29L2 6L6 10L10 6Z"
+                        fill="#9873FF" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_224_710">
+                        <rect width="12" height="12" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </th>
+                <th class="main-table__thead main-table__thead--time" id="th-update-time">
+                  Последние изменения
+                  <svg class="main-table__icon table-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_224_710)">
+                      <path d="M10 6L9.295 5.295L6.5 8.085L6.5 2H5.5L5.5 8.085L2.71 5.29L2 6L6 10L10 6Z"
+                        fill="#9873FF" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_224_710">
+                        <rect width="12" height="12" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </th>
+                <th class="main-table__thead">
+                  Контакты
+                </th>
+                <th class="main-table__thead">
+                  Действия
+                </th>
+              </tr>
+            </thead>
+            <tbody class="main-table__tbody main-table__tbody--hidden">
+              <tr class="main-table__row">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="main-table__loader loader" id="loader">
+            <svg class="loader__icon" width="40" height="40" viewBox="0 0 40 40" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2 20C2 29.941 10.059 38 20 38C29.941 38 38 29.941 38 20C38 10.059 29.941 2 20 2C17.6755 2 15.454 2.4405 13.414 3.243"
+                stroke="#9873FF" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <button class="main__add-btn">
+        <svg class="main__add-icon" width="23" height="16" viewBox="0 0 23 16" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M14.5 8C16.71 8 18.5 6.21 18.5 4C18.5 1.79 16.71 0 14.5 0C12.29 0 10.5 1.79 10.5 4C10.5 6.21 12.29 8 14.5 8ZM5.5 6V3H3.5V6H0.5V8H3.5V11H5.5V8H8.5V6H5.5ZM14.5 10C11.83 10 6.5 11.34 6.5 14V16H22.5V14C22.5 11.34 17.17 10 14.5 10Z"
+            fill="#9873FF" />
+        </svg>
+        Добавить клиента
+      </button>
+
+    </main>
+    <div class="modal ">
+      <h2 class="modal__title">
+
+      </h2>
+      <form action="#" class="modal__form" id="modal-scrollbar" data-simplebar>
+        <div class="form__hightight">
+          Фамилия
+        </div>
+        <input placeholder="Фамилия*" name="surname" class="modal__input" type="text" id="surname">
+        <div class="form__hightight">
+          Имя
+        </div>
+        <input placeholder="Имя*" name="name" class="modal__input" type="text" id="name">
+        <div class="form__hightight">
+          Отчество
+        </div>
+        <input placeholder="Отчество*" name="lastName" class="modal__input" type="text" id="lastname">
+        <div class="modal__contact add-contact">
+          <div class="add-contact__select add-contact-select">
+
+          </div>
+          <button class="add-contact__btn">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_224_3502)">
+                <path
+                  d="M7.99998 4.66671C7.63331 4.66671 7.33331 4.96671 7.33331 5.33337V7.33337H5.33331C4.96665 7.33337 4.66665 7.63337 4.66665 8.00004C4.66665 8.36671 4.96665 8.66671 5.33331 8.66671H7.33331V10.6667C7.33331 11.0334 7.63331 11.3334 7.99998 11.3334C8.36665 11.3334 8.66665 11.0334 8.66665 10.6667V8.66671H10.6666C11.0333 8.66671 11.3333 8.36671 11.3333 8.00004C11.3333 7.63337 11.0333 7.33337 10.6666 7.33337H8.66665V5.33337C8.66665 4.96671 8.36665 4.66671 7.99998 4.66671ZM7.99998 1.33337C4.31998 1.33337 1.33331 4.32004 1.33331 8.00004C1.33331 11.68 4.31998 14.6667 7.99998 14.6667C11.68 14.6667 14.6666 11.68 14.6666 8.00004C14.6666 4.32004 11.68 1.33337 7.99998 1.33337ZM7.99998 13.3334C5.05998 13.3334 2.66665 10.94 2.66665 8.00004C2.66665 5.06004 5.05998 2.66671 7.99998 2.66671C10.94 2.66671 13.3333 5.06004 13.3333 8.00004C13.3333 10.94 10.94 13.3334 7.99998 13.3334Z"
+                  fill="#9873FF" />
+              </g>
+              <defs>
+                <clipPath id="clip0_224_3502">
+                  <rect width="16" height="16" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            Добавить контакт
+          </button>
+        </div>
+        <span class="modal__error-msg hidden">
+        </span>
+        <button class="modal__save-btn">
+          <svg class="modal__save-icon hidden" width="16" height="16" viewBox="0 0 16 16" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_224_6260)">
+              <path
+                d="M3.00008 8.03996C3.00008 10.8234 5.2566 13.08 8.04008 13.08C10.8236 13.08 13.0801 10.8234 13.0801 8.03996C13.0801 5.25648 10.8236 2.99996 8.04008 2.99996C7.38922 2.99996 6.7672 3.1233 6.196 3.348"
+                stroke="#B89EFF" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" />
+            </g>
+            <defs>
+              <clipPath id="clip0_224_6260">
+                <rect width="16" height="16" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+          <span class="modal__save-text"></span>
+        </button>
+        <button class="modal__second-btn">
+          Удалить клиента
+        </button>
+      </form>
+      <div class="modal__delete-form hidden">
+        <p class="tbody__text" style="text-align: center;">
+          Вы действительно хотите удалить данного клиента?
+        </p>
+        <button class="modal__save-btn" id="modalDeleteBtn">Удалить</button>
+        <button class="modal__second-btn" id="modalSecondBtn">Отмена</button>
+      </div>
+      <button class="modal__close-btn">
+        <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M22.2332 7.73333L21.2665 6.76666L14.4998 13.5334L7.73318 6.7667L6.76652 7.73336L13.5332 14.5L6.76654 21.2667L7.73321 22.2333L14.4998 15.4667L21.2665 22.2334L22.2332 21.2667L15.4665 14.5L22.2332 7.73333Z"
+            fill="#B0B0B0" />
+        </svg>
+      </button>
+    </div>
+    <div class="modal-bg hidden" id="modal-backdrop"></div>
+  </div>
+
+  <script src="js/inputmask.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+  <script defer type="module" src="/js/main.js"></script>
+</body>
+
+</html>
